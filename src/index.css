@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+    /* Modern Violet + Cyan palette */
+    --color-primary: #7C3AED;
+    --color-primary-dark: #6D28D9;
+    --color-primary-light: #A78BFA;
+    --color-accent: #06B6D4;
+    --color-accent-dark: #0891B2;
+    --color-accent-light: #67E8F9;
+    --color-bg: #FAFBFF;
+    --color-card: #FFFFFF;
+    --color-surface: #F1F0FB;
+    --color-text: #1E1B4B;
+    --color-text-secondary: #7C7C9A;
+    --color-doc: #10B981;
+    --color-doc-bg: #ECFDF5;
+    --color-ppt: #6366F1;
+    --color-ppt-bg: #EEF2FF;
+    --color-pdf: #F43F5E;
+    --color-pdf-bg: #FFF1F2;
+    --color-img: #F59E0B;
+    --color-img-bg: #FFFBEB;
+    --color-folder: #8B5CF6;
+    --color-folder-bg: #F5F3FF;
+}
+
+@layer base {
+    body {
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        background-color: var(--color-bg);
+        color: var(--color-text);
+        margin: 0;
+        padding: 0;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Montserrat', system-ui, sans-serif;
+    }
+
+    /* Custom scrollbar */
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    /* Glass morphism utility */
+    .glass {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .glass-dark {
+        background: rgba(109, 40, 217, 0.85);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Gradient text */
+    .gradient-text {
+        background: linear-gradient(135deg, #7C3AED 0%, #06B6D4 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    /* Mesh gradient background */
+    .mesh-gradient {
+        background:
+            radial-gradient(at 20% 20%, rgba(124, 58, 237, 0.15) 0%, transparent 50%),
+            radial-gradient(at 80% 20%, rgba(6, 182, 212, 0.12) 0%, transparent 50%),
+            radial-gradient(at 50% 80%, rgba(167, 139, 250, 0.08) 0%, transparent 50%),
+            var(--color-bg);
+    }
+}
